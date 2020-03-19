@@ -1,5 +1,19 @@
 body {
   background-color: whitesmoke;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main {
+  margin-right: 160px;
+  background-color: rgb(177, 4, 33);
+  text-align: center;
+}
+
+.sandwich {
+  width: 100vw;
+  height: 100vh;
 }
 
 .sideNav {
@@ -9,7 +23,7 @@ body {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: rgb(226, 8, 44);
+  background-color: rgb(177, 4, 33);
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -20,14 +34,34 @@ body {
   justify-content: center;
 }
 
+.logo:hover {
+}
+
 .sideNav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: lightgray;
   display: block;
+  font-family: Arial;
 }
 
 .sideNav a:hover {
   color: #f1f1f1;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+.menu {
+  //width: 100vw;
+  //height: auto;
+}
+
+.about {
+  color: white;
+  width: 400px;
+  padding: 20px;
 }
