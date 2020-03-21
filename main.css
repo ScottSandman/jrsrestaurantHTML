@@ -1,53 +1,63 @@
 body {
-  background-color: whitesmoke;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.main {
-  margin-right: 160px;
   background-color: rgb(177, 4, 33);
-  text-align: center;
-}
-
-.sandwich {
-  width: 100vw;
-  height: 100vh;
+  margin: 0 0 50px; 0;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sideNav {
   height: 100%;
-  width: 160px;
+  width: 180px;
   position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: rgb(177, 4, 33);
-  overflow-x: hidden;
   padding-top: 20px;
-}
-
-.logo {
-  width: 120px;
-  border-radius: 50%;
-  justify-content: center;
-}
-
-.logo:hover {
 }
 
 .sideNav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
+  text-shadow: 4px 4px black;
   font-size: 20px;
-  color: lightgray;
+  color: white;
   display: block;
-  font-family: Arial;
+  font-family: Arial black;
 }
 
 .sideNav a:hover {
   color: #f1f1f1;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.main {
+  margin-right: 180px;
+  text-align: center;
+}
+
+.images {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.sandwich {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 200px);
+  width: 400px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .center {
@@ -56,12 +66,99 @@ body {
 }
 
 .menu {
-  //width: 100vw;
-  //height: auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
 }
 
 .about {
   color: white;
   width: 400px;
   padding: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.location {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#location1,
+#location2 {
+  height: 400px;
+  width: 400px;
+}
+
+.map {
+}
+
+.map-footer {
+}
+
+.map-footer-title {
+  text-shadow: 4px 4px black;
+  color: white;
+  font-family: Arial black;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.map-footer-text {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.modal-body {
+  display: flex;
+  text-align: justify;
+}
+
+.modal-body p {
+  padding: 12px;
+}
+
+.wine {
+  width: 180px;
+  height: auto;
+  padding: 12px;
+}
+
+.modal-header {
+  background-color: rgb(177, 4, 33);
+}
+
+.modal-title {
+  text-shadow: 4px 4px black;
+  color: white;
+  font-family: Arial black;
+}
+
+.modal-body {
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-footer {
+  background-color: rgb(177, 4, 33);
+}
+
+.btn {
+  color: black;
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: lightgrey;
+  color: black;
 }

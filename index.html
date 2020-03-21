@@ -5,42 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta author="Scott Sandman" />
     <title>Joey Tomatoes Deli and Market</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj8Cw0SkmCylbfqHXmRpuqkBJEou7VE2w&callback=initMap"
+    ></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
     <!--navigation-->
     <div class="sideNav">
-      <a href="#home"
-        ><img
-          class="logo"
-          src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/14937466_155012088302712_8773674962588928492_n.jpg?_nc_cat=104&_nc_sid=85a577&_nc_ohc=6aJSYaOUl5UAX97KlRE&_nc_ht=scontent-mia3-1.xx&oh=689174d835a09e74c9e94990209b3e21&oe=5E957B06"
-          alt="Joey Tomatoes"
-      /></a>
-      <a href="#about">About Us</a>
+      <a href="#home">Home</a>
+      <a data-toggle="modal" data-target="#about">About Us</a>
       <a href="#menu">Menu</a>
-      <a href="#location">Locations</a>
+      <a href="#location1">Locations</a>
       <a href="#contact">Contact Us</a>
     </div>
     <!-- end navigation -->
     <div class="main">
-      <div>
+      <div class="images">
         <img
           class="sandwich"
           id="home"
           src="https://scontent-mia3-2.xx.fbcdn.net/v/t31.0-8/15578280_193497954454125_4435319243295781112_o.jpg?_nc_cat=102&_nc_sid=6e5ad9&_nc_ohc=EhwHWbtVXhYAX8nxhy1&_nc_ht=scontent-mia3-2.xx&oh=2fef2648262f32d73a3ba074bd93e7c1&oe=5E984B05"
           alt="Awesome Sandwiches"
         />
+        <img
+          class="logo"
+          src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/14937466_155012088302712_8773674962588928492_n.jpg?_nc_cat=104&_nc_sid=85a577&_nc_ohc=6aJSYaOUl5UAX97KlRE&_nc_ht=scontent-mia3-1.xx&oh=689174d835a09e74c9e94990209b3e21&oe=5E957B06"
+          alt="Joey Tomatoes"
+        />
       </div>
-      <!-- about -->
-      <div class="about" id="about">
-        <p>
-          Joey Tomatoes Deli & Market provides a high quality food made to
-          perfection. Come in and experience our unmatched service and food.
-          Browse our restaurant menu today we have to great locations in Mt
-          Pleasant and on Clements Ferry Road!
-        </p>
-      </div>
-      <!-- end about -->
       <!-- menu -->
       <div class="center">
         <img
@@ -53,11 +55,101 @@
       <!-- end menu -->
       <!-- locations -->
       <div class="location">
-        <div class="card" id="location1"></div>
-        <div class="card" id="location2"></div>
+        <script>
+          // Initialize and adds the maps
+
+          function initMap() {
+            var mtp = { lat: 32.79811, lng: -79.858628 };
+            var cf = { lat: 32.933645, lng: -79.831163 };
+            var map1 = new google.maps.Map(
+              document.getElementById("location1"),
+              {
+                zoom: 12,
+                center: mtp
+              }
+            );
+            var map2 = new google.maps.Map(
+              document.getElementById("location2"),
+              {
+                zoom: 12,
+                center: cf
+              }
+            );
+            var marker1 = new google.maps.Marker({
+              position: mtp,
+              map: map1,
+              title: "Mt. Pleasant Location"
+            });
+            var marker = new google.maps.Marker({
+              position: cf,
+              map: map2,
+              title: "Clements Ferry Location"
+            });
+          }
+        </script>
+        <div>
+          <div class="map" id="location1"></div>
+          <div class="map-footer">
+            <p class="map-footer-title">Mt. Pleasant Location</p>
+            <p class="map-footer-text">
+              1034 Chuck Dawley Boulevard<br />
+              Mt. Pleasant, SC 29464<br />
+              (843)352-2294
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="map" id="location2"></div>
+          <div class="map-footer">
+            <p class="map-footer-title">Daniel Island Location</p>
+            <p class="map-footer-text">
+              Clements Ferry Road<br />
+              Daniel Island, SC 29492<br />
+              (843)867-6944
+            </p>
+          </div>
+        </div>
       </div>
       <!-- end locations-->
     </div>
     <!-- end main -->
+    <!-- about Modal -->
+    <div class="modal" id="about">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Joey Tomatoes</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <img
+              class="wine"
+              src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/14980584_155312634939324_7357868642701359887_n.jpg?_nc_cat=104&_nc_sid=2d5d41&_nc_ohc=n4zJS6DtQ0kAX98gkxv&_nc_ht=scontent-atl3-1.xx&oh=73cb5230762f29343ff784704dbf7c0e&oe=5E9BF087"
+            />
+            <p>
+              Joey Tomatoes Deli & Market provides high quality food made to
+              perfection. Come in and experience our unmatched service and food.
+              Browse our menu for many wonderful breakfast and lunch options and
+              you certainly don't want to pass on our desserts. We have two
+              great locations in Mt Pleasant and on Clements Ferry Road. Have a
+              special event or business function? We provide catering, too!
+            </p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end about modal -->
   </body>
 </html>
