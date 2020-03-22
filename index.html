@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta author="Scott Sandman" />
     <title>Joey Tomatoes Deli and Market</title>
     <link
       rel="stylesheet"
@@ -26,7 +25,8 @@
       <a data-toggle="modal" data-target="#about">About Us</a>
       <a href="#menu">Menu</a>
       <a href="#location1">Locations</a>
-      <a href="#contact">Contact Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#feedback">Feedback</a>
     </div>
     <!-- end navigation -->
     <div class="main">
@@ -90,11 +90,15 @@
         <div>
           <div class="map" id="location1"></div>
           <div class="map-footer">
-            <p class="map-footer-title">Mt. Pleasant Location</p>
+            <p class="map-footer-title" id="contact">Mt. Pleasant Location</p>
             <p class="map-footer-text">
               1034 Chuck Dawley Boulevard<br />
               Mt. Pleasant, SC 29464<br />
               (843)352-2294
+            </p>
+            <p class="hours">
+              Mon thru Sat: 8am - 6pm<br />
+              Sun: 8am - 3pm
             </p>
           </div>
         </div>
@@ -107,10 +111,129 @@
               Daniel Island, SC 29492<br />
               (843)867-6944
             </p>
+            <p class="hours">
+              Mon thru Fri: 7am - 3pm<br />
+              Sun: 8am - 3pm
+            </p>
           </div>
         </div>
       </div>
-      <!-- end locations-->
+      <!-- end locations -->
+      <!-- feedback form -->
+      <div class="container" id="feedback">
+        <div class="form-title">How Did We Do?</div>
+        <form>
+          <div class="row">
+            <div class="small">
+              <label for="name">Name: (optional)</label>
+            </div>
+            <div class="large">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+              /><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label for="email">Email: (optional)</label>
+            </div>
+            <div class="large">
+              <input
+                type="email"
+                id="email"
+                placeholder="enter your email here"
+              /><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label for="visited">Location you visited:</label>
+            </div>
+            <div class="large">
+              <select id="visited" required>
+                <option value="">Mt. Pleasant</option>
+                <option value="">Daniel Island</option> </select
+              ><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label for="day-visited">Day Visited:</label>
+            </div>
+            <div class="large">
+              <input id="day-visited" type="datetime-local" /><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Food Quality:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Service Quality:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Order Accuracy:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Speed of Service:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Value:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Cleanliness:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small">
+              <label>Overall Experience:</label>
+            </div>
+            <div class="large rating">
+              <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
+              ><span>&#9734;</span><span>&#9734;</span>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Submit</button>
+        </form>
+      </div>
+      <!-- end feedback form -->
     </div>
     <!-- end main -->
     <!-- about Modal -->
@@ -130,6 +253,7 @@
             <img
               class="wine"
               src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/14980584_155312634939324_7357868642701359887_n.jpg?_nc_cat=104&_nc_sid=2d5d41&_nc_ohc=n4zJS6DtQ0kAX98gkxv&_nc_ht=scontent-atl3-1.xx&oh=73cb5230762f29343ff784704dbf7c0e&oe=5E9BF087"
+              alt="A Meal Without Wine is Called Breakfast"
             />
             <p>
               Joey Tomatoes Deli & Market provides high quality food made to
@@ -153,3 +277,29 @@
     <!-- end about modal -->
   </body>
 </html>
+
+<!-- <div class="row">
+            <div class="small">
+              <label>Dine In/Take Out:</label>
+            </div>
+            <div class="large">
+              <div class="row radio-align">
+                <input
+                  type="radio"
+                  id="dine-in"
+                  name="dine-in"
+                  value="dine-in"
+                />
+                <label for="dine-in">Dine In</label>
+              </div>
+              <div class="row radio-align">
+                <input
+                  type="radio"
+                  id="take-out"
+                  name="take-out"
+                  value="take-out"
+                />
+                <label for="take-out">Take Out</label>
+              </div>
+            </div> 
+          </div> -->

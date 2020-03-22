@@ -1,6 +1,6 @@
 body {
   background-color: rgb(177, 4, 33);
-  margin: 0 0 50px; 0;
+  margin: 0 0 50px 0;
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -88,18 +88,13 @@ body {
 .location {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 80px;
 }
 
 #location1,
 #location2 {
   height: 400px;
   width: 400px;
-}
-
-.map {
-}
-
-.map-footer {
 }
 
 .map-footer-title {
@@ -116,6 +111,97 @@ body {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+}
+
+.hours {
+  font-size: 16px;
+  color: white;
+  margin-top: 0;
+}
+
+.container {
+  margin-bottom: 100px;
+}
+
+.form-title {
+  text-shadow: 4px 4px black;
+  color: white;
+  font-family: Arial black;
+  font-size: 24px;
+}
+
+form {
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 8px solid white;
+  border-radius: 20px;
+  box-shadow: 8px 8px black;
+  padding: 25px;
+}
+
+.small {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+.large {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+label {
+  float: left;
+  padding: 12px 12px 12px 0;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/*.rating {
+  unicode-bidi: bidi-override;
+  direction: ;
+}*/
+
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+}
+
+span {
+  float: left;
+  padding: 18px 6px 0 0;
+}
+
+.form-submit {
+  background-color: white;
+  width: 150px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.form-submit:hover {
+  background-color: lightgray;
+  color: black;
 }
 
 .modal-body {
